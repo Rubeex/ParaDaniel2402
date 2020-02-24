@@ -4,7 +4,14 @@
  * and open the template in the editor.
  */
 package Formulario;
-
+import Entidades.Easientos;
+import Entidades.Ecine;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
+import javax.swing.JRadioButton;
 /**
  *
  * @author Usuario
@@ -12,6 +19,8 @@ package Formulario;
 public class frmAsientos extends javax.swing.JFrame {
     
     public String funcion;
+    private List<Easientos> atrListaAsientos = new ArrayList<Easientos>();
+
 
     /**
      * Creates new form frmAsientos
@@ -21,6 +30,38 @@ public class frmAsientos extends javax.swing.JFrame {
         this.funcion=funcion;
         setSize(700,400);
         setLocationRelativeTo(this);
+        Easientos objAsiento = new Easientos(0,false);
+        atrListaAsientos.add(objAsiento);
+        Easientos objAsiento1 = new Easientos(1,false);
+        atrListaAsientos.add(objAsiento1);
+        Easientos objAsiento2 = new Easientos(2,false);
+        atrListaAsientos.add(objAsiento2);
+        Easientos objAsiento3 = new Easientos(3,false);
+        atrListaAsientos.add(objAsiento3);
+        Easientos objAsiento4 = new Easientos(4,false);
+        atrListaAsientos.add(objAsiento4);
+        Easientos objAsiento5 = new Easientos(5,false);
+        atrListaAsientos.add(objAsiento5);
+        Easientos objAsiento6 = new Easientos(6,false);
+        atrListaAsientos.add(objAsiento6);
+        Easientos objAsiento7 = new Easientos(7,false);
+        atrListaAsientos.add(objAsiento7);
+        Easientos objAsiento8 = new Easientos(8,false);
+        atrListaAsientos.add(objAsiento8);
+        Easientos objAsiento9 = new Easientos(9,false);
+        atrListaAsientos.add(objAsiento9);
+        Easientos objAsiento10 = new Easientos(10,false);
+        atrListaAsientos.add(objAsiento10);
+        Easientos objAsiento11 = new Easientos(11,false);
+        atrListaAsientos.add(objAsiento11);
+        Easientos objAsiento12 = new Easientos(12,false);
+        atrListaAsientos.add(objAsiento12);
+        Easientos objAsiento13 = new Easientos(13,false);
+        atrListaAsientos.add(objAsiento13);
+
+
+        
+        
     }
 
     /**
@@ -78,6 +119,11 @@ public class frmAsientos extends javax.swing.JFrame {
         jRadioButton1.setForeground(new java.awt.Color(51, 51, 51));
         jRadioButton1.setText("1");
         jRadioButton1.setBorder(javax.swing.BorderFactory.createTitledBorder("Asientos"));
+        jRadioButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jRadioButton1MouseClicked(evt);
+            }
+        });
         getContentPane().add(jRadioButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 60, 40));
 
         jRadioButton2.setBackground(new java.awt.Color(0, 204, 204));
@@ -314,6 +360,10 @@ public class frmAsientos extends javax.swing.JFrame {
       this.hide();
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jRadioButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton1MouseClicked
+        JOptionPane.showMessageDialog(null, "My Goodness, this is so concise");
+    }//GEN-LAST:event_jRadioButton1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -347,6 +397,8 @@ public class frmAsientos extends javax.swing.JFrame {
                 new frmAsientos("").setVisible(true);
             }
         });
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

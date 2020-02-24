@@ -45,6 +45,16 @@ public class TCine {
         }
         return pos;
     }
+    public static Easientos BuscarAsiento(int id){
+        for(int i=0; i< Tasientos.size();i++)
+        {
+            if(Tasientos.get(i).getAsiento()==id){
+                return Tasientos.get(i);
+            }
+        }
+        return null;
+        
+    }
 
     public static DefaultTableModel MostrarDatosCliente() {
         String[] T = {"Cédula", "Nombre", "Apellidos", "Telefono", "Edad", "Sexo", "Cantidad Boletos"};
@@ -102,5 +112,14 @@ public class TCine {
     
     public static ESalas getEsalas(int pos){
         return Tsalas.get(pos);
+    }
+    public static void ModificarAsiento(int id){
+      for(int i=0; i< Tasientos.size();i++)
+        {
+            if(Tasientos.get(i).getAsiento()==id){
+                Tasientos.get(i).setOcupad(true);
+            }
+        }
+        
     }
 }

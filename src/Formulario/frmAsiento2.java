@@ -8,8 +8,13 @@ package Formulario;
 import Controlador.TCine;
 import Entidades.Easientos;
 import Entidades.Ecine;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
-
+import Controlador.TCine;
 /**
  *
  * @author Usuario
@@ -17,7 +22,7 @@ import javax.swing.JRadioButton;
 public class frmAsiento2 extends javax.swing.JFrame {
 
     public String funcion;
-
+    
     /**
      * Creates new form frmAsiento2
      */
@@ -26,6 +31,49 @@ public class frmAsiento2 extends javax.swing.JFrame {
         this.funcion = funcion;
         setSize(700, 400);
         setLocationRelativeTo(this);
+         Easientos objAsiento = new Easientos(0,false);
+        TCine.Ingresar3(objAsiento);
+        Easientos objAsiento1 = new Easientos(1,false);
+        TCine.Ingresar3(objAsiento1);
+        Easientos objAsiento2 = new Easientos(2,false);
+        TCine.Ingresar3(objAsiento2);
+        Easientos objAsiento3 = new Easientos(3,false);
+        TCine.Ingresar3(objAsiento3);
+        Easientos objAsiento4 = new Easientos(4,false);
+        TCine.Ingresar3(objAsiento4);
+        Easientos objAsiento5 = new Easientos(5,false);
+        TCine.Ingresar3(objAsiento5);
+        Easientos objAsiento6 = new Easientos(6,false);
+        TCine.Ingresar3(objAsiento6);
+        Easientos objAsiento7 = new Easientos(7,false);
+        TCine.Ingresar3(objAsiento7);
+        Easientos objAsiento8 = new Easientos(8,false);
+        TCine.Ingresar3(objAsiento8);
+        Easientos objAsiento9 = new Easientos(9,false);
+       TCine.Ingresar3(objAsiento9);
+        Easientos objAsiento10 = new Easientos(10,false);
+        TCine.Ingresar3(objAsiento10);
+        Easientos objAsiento11 = new Easientos(11,false);
+        TCine.Ingresar3(objAsiento11);
+        Easientos objAsiento12 = new Easientos(12,false);
+        TCine.Ingresar3(objAsiento12);
+        Easientos objAsiento13 = new Easientos(13,false);
+       TCine.Ingresar3(objAsiento13);
+        
+        
+        jRadioButton1.addActionListener(new ActionListener(){
+    public void actionPerformed(ActionEvent e) {
+        Integer.parseInt(jRadioButton1.getText());
+      Easientos asiento =TCine.BuscarAsiento(Integer.parseInt(jRadioButton1.getText()));
+      if(asiento.isOcupad()){
+           JOptionPane.showMessageDialog(null, "BUSQUE OTRO SETENTA HIJUEPUTA ASIENTO NO JODA");
+      }
+       else{
+          TCine.ModificarAsiento(Integer.parseInt(jRadioButton1.getText()));
+          
+      }
+    }
+});
     }
 
 
